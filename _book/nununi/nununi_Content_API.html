@@ -1,0 +1,757 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Content API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="nununi_Content_API_v1_2.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Nununi Content API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="nununi_Content_API.html">
+            
+                <a href="nununi_Content_API.html">
+            
+                    
+                    Content API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="nununi_Content_API_v1_2.html">
+            
+                <a href="nununi_Content_API_v1_2.html">
+            
+                    
+                    Content API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Nununi Products API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="nununi_Products_API.html">
+            
+                <a href="nununi_Products_API.html">
+            
+                    
+                    Products API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="nununi_Products_API_v2_2.html">
+            
+                <a href="nununi_Products_API_v2_2.html">
+            
+                    
+                    Products API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Content API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="awoo-nununi-content-api">awoo nununi Content API</h1>
+<p>Supportive API call: <code>JSON</code></p>
+<h3 id="request-header-key-value">Request header key-value</h3>
+<p>Authorization: Bearer <code>access_token</code></p>
+<p>Content-Type: application/json</p>
+<h3 id="post-content"><code>POST</code> content</h3>
+<p>&#x6839;&#x64DA;&#x50B3;&#x5165;&#x7684;&#x6A19;&#x7C64;&#x8207;&#x5206;&#x985E;&#x53D6;&#x5F97; nununi &#x9801;&#x9762;&#x7684;&#x6240;&#x6709;&#x76F8;&#x95DC;&#x8CC7;&#x8A0A;&#x3001;&#x5546;&#x54C1;&#x8CC7;&#x6599;&#x8207;&#x63A8;&#x85A6;&#x6A19;&#x7C64;&#x9023;&#x7D50;</p>
+<h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v1/`nununiId`/content/" target="_blank">https://api.awoo.org/nununi/v1/`nununiId`/content/</a></p>
+<pre><code>Requires authorization
+</code></pre><h3 id="path-parameters">Path parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">nununiId</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left"><code>Required</code>. nununi &#x5BA2;&#x6236; ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="query-parameters">Query parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">tags</td>
+<td style="text-align:center">list</td>
+<td style="text-align:left"><code>Required</code> &#x4E0A;&#x9650;&#x4E09;&#x500B;</td>
+</tr>
+<tr>
+<td style="text-align:left">page</td>
+<td style="text-align:center">integer</td>
+<td style="text-align:left"><code>Required</code> &#x9801;&#x6578;&#xFF0C;&#x7B2C;&#x4E00;&#x9801;&#x70BA; 1</td>
+</tr>
+<tr>
+<td style="text-align:left">limit</td>
+<td style="text-align:center">integer</td>
+<td style="text-align:left"><code>Required</code> &#x6BCF;&#x9801;&#x5546;&#x54C1;&#x6578;</td>
+</tr>
+<tr>
+<td style="text-align:left">sort</td>
+<td style="text-align:center">integer</td>
+<td style="text-align:left"><code>Required</code> &#x5546;&#x54C1;&#x6392;&#x5E8F;&#x4F9D;&#x64DA;&#xFF1A;<br>1. &#x7531;&#x4F4E;&#x5230;&#x9AD8;&#x4F9D;&#x50F9;&#x683C;&#x6392;&#x5E8F;, &#x6709;&#x7279;&#x50F9;&#x512A;&#x5148;&#x6392;&#x5E8F;&#x7279;&#x50F9;&#x5546;&#x54C1;<br>2. &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x4F9D;&#x50F9;&#x683C;&#x6392;&#x5E8F;, &#x6709;&#x7279;&#x50F9;&#x512A;&#x5148;&#x6392;&#x5E8F;&#x7279;&#x50F9;&#x5546;&#x54C1;<br>3. &#x7531;&#x4F4E;&#x5230;&#x9AD8;&#x4F9D;&#x53D7;&#x6B61;&#x8FCE;&#x7A0B;&#x5EA6;&#x6392;&#x5E8F;<br>4. &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x4F9D;&#x53D7;&#x6B61;&#x8FCE;&#x7A0B;&#x5EA6;&#x6392;&#x5E8F;<br>5. &#x7531;&#x4F4E;&#x5230;&#x9AD8;&#x4F9D;&#x559C;&#x611B;&#x7A0B;&#x5EA6;/&#x6536;&#x85CF;&#x6578;&#x6392;&#x5E8F;<br>6. &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x4F9D;&#x559C;&#x611B;&#x7A0B;&#x5EA6;/&#x6536;&#x85CF;&#x6578;&#x6392;&#x5E8F;<br>7. &#x7531;&#x4F4E;&#x5230;&#x9AD8;&#x4F9D;&#x92B7;&#x552E;&#x91CF;&#x6392;&#x5E8F;<br>8. &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x4F9D;&#x92B7;&#x552E;&#x91CF;&#x6392;&#x5E8F;<br>9. &#x7531;&#x4F4E;&#x5230;&#x9AD8;&#x4F9D;&#x700F;&#x89BD;&#x4EBA;&#x6B21;&#x6392;&#x5E8F;<br>10. &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x4F9D;&#x700F;&#x89BD;&#x4EBA;&#x6B21;&#x6392;&#x5E8F;<br>11. &#x7531;&#x820A;&#x5230;&#x65B0;&#x4F9D;&#x4E0A;&#x67B6;&#x6642;&#x9593;&#x6392;&#x5E8F;<br>12. &#x7531;&#x65B0;&#x5230;&#x820A;&#x4F9D;&#x4E0A;&#x67B6;&#x6642;&#x9593;&#x6392;&#x5E8F;<br>13. &#x7531;&#x820A;&#x5230;&#x65B0;&#x4F9D;&#x66F4;&#x65B0;&#x6642;&#x9593;&#x6392;&#x5E8F;<br>14. &#x7531;&#x65B0;&#x5230;&#x820A;&#x4F9D;&#x66F4;&#x65B0;&#x6642;&#x9593;&#x6392;&#x5E8F;<br>15. &#x7531;&#x4F4E;&#x5230;&#x9AD8;&#x4F9D;&#x8A55;&#x8AD6;&#x6578;&#x6392;&#x5E8F;<br>16. &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x4F9D;&#x8A55;&#x8AD6;&#x6578;&#x6392;&#x5E8F;<br>17. &#x7531;&#x4F4E;&#x5230;&#x9AD8;&#x4F9D;&#x661F;&#x7B49;&#x6578;&#x6392;&#x5E8F;<br>18. &#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x4F9D;&#x661F;&#x7B49;&#x6578;&#x6392;&#x5E8F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="php-curl-example">PHP cURL Example</h3>
+<pre><code>/* Authorization Information */
+define(&quot;NUNUNI_ID&quot;, &quot;{{YOUR_NUNUNI_ID}}&quot;);
+define(&quot;NUNUNI_API_TOKEN&quot;, &quot;{{YOUR_NUNUNI_API_TOKEN}}&quot;);
+define(&quot;NUNUNI_API_VERSION&quot;, &quot;v1&quot;);
+define(&quot;NUNUNI_API_NAME&quot;, &quot;content&quot;);
+
+/* Parameters */
+$tags = [&quot;&#x53E3;&#x7D05;&quot;];
+$page = 1;
+$limit = 10;
+$sort = 1;
+
+/* content */
+echo &quot;Call API:\n&quot;;
+$params = compact( &quot;tags&quot;, &quot;page&quot;, &quot;limit&quot;, &quot;sort&quot; );
+$content = request(
+    packApiUrl(NUNUNI_ID, NUNUNI_API_VERSION, NUNUNI_API_NAME),
+    $params,
+    &quot;POST&quot;
+);
+print_r($content);
+
+exit;
+
+/* Pack API URL function */
+function packApiUrl($nununiId, $apiVer, $apiName) {
+    return (&quot;https://api.awoo.org/nununi/{$apiVer}/{$nununiId}/{$apiName}&quot;);
+}
+
+/* cURL function */
+function request($url = &quot;&quot;, $data = [], $method = &quot;GET&quot;, $token = NUNUNI_API_TOKEN) {
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        &quot;Authorization: Bearer {$token}&quot;,
+        &quot;Content-Type: application/json&quot;,
+    ]);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    if (strtoupper($method) === &quot;POST&quot;) {
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    }
+
+    curl_setopt($ch, CURLOPT_TIMEOUT, 120);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 120);
+
+    $responseBody = curl_exec($ch);
+    curl_close($ch);
+
+    return json_decode($responseBody, true);
+}
+</code></pre><h3 id="response">Response</h3>
+<p>Status code 200</p>
+<pre><code>{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;ACK&quot;,
+  &quot;result&quot;: {
+    &quot;pageInfo&quot;: {
+      &quot;title&quot;: &quot;xxxxx&quot;,
+      &quot;description&quot;: &quot;xxxxxx&quot;,
+      &quot;openGraph&quot;: {
+        &quot;title&quot;: &quot;xxxxx&quot;,
+        &quot;description&quot;: &quot;xxxxxx&quot;,
+        &quot;siteName&quot;: &quot;xxxx&quot;,
+        &quot;url&quot;: &quot;https://xxxxx.xxx.xxx&quot;,
+        &quot;image&quot;: &quot;https://xxxx.xxxx.xxx&quot;,
+        &quot;type&quot;: &quot;website&quot;
+      },
+      &quot;canonical&quot;: &quot;https://customerHost.com/xxxx&quot;,
+      &quot;schema&quot;: {
+        &quot;breadcrumbs&quot;: &quot;{xxxxxx}&quot;
+      },
+      &quot;intro&quot;: &quot;xxxxxx&quot;,
+      &quot;h1&quot;: &quot;xxxxxx&quot;
+    },
+    &quot;categoriesTags&quot;: {
+      &quot;goods&quot;: [
+        {
+          &quot;text&quot;: &quot;&#x7269;&#x54C1;1 tag &#x6587;&#x5B57;&quot;,
+          &quot;link&quot;: &quot;&#x7269;&#x54C1;1 rel-link &#x9023;&#x7D50;&quot;,
+          &quot;linkTitle&quot;: &quot;&#x9023;&#x7D50;&#x6587;&#x5B57;&quot;
+        }
+      ],
+      &quot;brand&quot;: [
+        {
+          &quot;text&quot;: &quot;&#x7269;&#x54C1;2 tag &#x6587;&#x5B57;&quot;,
+          &quot;link&quot;: &quot;&#x7269;&#x54C1;2 rel-link &#x9023;&#x7D50;&quot;,
+          &quot;linkTitle&quot;: &quot;&#x9023;&#x7D50;&#x6587;&#x5B57;&quot;
+        },
+        {
+          &quot;text&quot;: &quot;&#x54C1;&#x724C;1 tag &#x6587;&#x5B57;&quot;,
+          &quot;link&quot;: &quot;&#x54C1;&#x724C;1 rel-link &#x9023;&#x7D50;&quot;,
+          &quot;linkTitle&quot;: &quot;&#x9023;&#x7D50;&#x6587;&#x5B57;&quot;
+        },
+        {
+          &quot;text&quot;: &quot;&#x54C1;&#x724C;2 tag &#x6587;&#x5B57;&quot;,
+          &quot;link&quot;: &quot;&#x54C1;&#x724C;2 rel-link &#x9023;&#x7D50;&quot;,
+          &quot;linkTitle&quot;: &quot;&#x9023;&#x7D50;&#x6587;&#x5B57;&quot;
+        }
+      ]
+    },
+    &quot;suggestionTags&quot;: [
+      {
+        &quot;text&quot;: &quot;tags&#x6587;&#x5B57;&quot;,
+        &quot;link&quot;: &quot;tags&#x9023;&#x7D50;&quot;
+      }
+    ],
+    &quot;products&quot;: [
+      {
+        &quot;productId&quot;: &quot;A123456&quot;,
+        &quot;productName&quot;: &quot;xxxxxx&quot;,
+        &quot;url&quot;: &quot;https://xxx.xxx.xxx/xxx&quot;,
+        &quot;productImageUrl&quot;: &quot;https://xxx.xxx.xxx/xxx.xxx&quot;,
+        &quot;productBrand&quot;: &quot;xxx&quot;,
+        &quot;productPrice&quot;: 111,
+        &quot;productSalePrice&quot;: 99
+      }
+    ],
+    &quot;productsTotal&quot;: 99
+  }
+}
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:center">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">errcode</td>
+<td style="text-align:center">integer</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">errmsg</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result</td>
+<td style="text-align:center">object[]</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo</td>
+<td style="text-align:center">object[]</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.title</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x9801;&#x9762;&#x6A19;&#x984C;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.description</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x9801;&#x9762;&#x63CF;&#x8FF0;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.openGraph</td>
+<td style="text-align:center">object[]</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.openGraph.title</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Open Graph &#x6A19;&#x984C;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.openGraph.description</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Open Graph &#x63CF;&#x8FF0;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.openGraph.siteName</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Open Graph &#x7DB2;&#x7AD9;&#x540D;&#x7A31;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.openGraph.url</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Open Graph &#x9801;&#x9762;&#x7DB2;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.openGraph.image</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Open Graph &#x9801;&#x9762;&#x7E2E;&#x5716;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.openGraph.type</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">Open Graph &#x7DB2;&#x7AD9;&#x985E;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.canonical</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x9801;&#x9762;&#x6A19;&#x6E96;&#x9023;&#x7D50;&#x5143;&#x7D20;&#xFF08;&#x6703;&#x4F9D;&#x64DA;&#x95DC;&#x9375;&#x5B57;&#x6307;&#x5411;&#x6B0A;&#x91CD;&#x6700;&#x9AD8;&#x7DB2;&#x5740;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.schema</td>
+<td style="text-align:center">object[]</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.schema.breadcrumbs</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x9801;&#x9762;&#x9EB5;&#x5305;&#x5C51;&#x7D50;&#x69CB;&#x5316;&#x8CC7;&#x6599;&#x6A19;&#x8A18;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.intro</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x9801;&#x9762;&#x6587;&#x6848;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.pageInfo.h1</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x9801;&#x9762;&#x5927;&#x6A19;&#x984C;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.categoriesTags</td>
+<td style="text-align:center">object[]</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result.categoriesTags.literal[]</td>
+<td style="text-align:center">list[]</td>
+<td style="text-align:left">&#x6A19;&#x7C64;&#x5206;&#x985E;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.categoriesTags.literal[].text</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">nununi&#x6A19;&#x7C64;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.categoriesTags.literal[].link</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">nununi&#x6A19;&#x7C64;url (encode url,&#x76F8;&#x5C0D;&#x8DEF;&#x5F91;)</td>
+</tr>
+<tr>
+<td style="text-align:left">result.categoriesTags.literal[].linkTitle</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x9023;&#x7D50;&#x6587;&#x5B57;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.suggestionTags[]</td>
+<td style="text-align:center">list[]</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result.suggestionTags[].text</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x76F8;&#x95DC;&#x9023;&#x7D50;&#x6A19;&#x7C64;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.suggestionTags[].link</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x76F8;&#x95DC;&#x9023;&#x7D50;url (encode url,&#x76F8;&#x5C0D;&#x8DEF;&#x5F91;)</td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[]</td>
+<td style="text-align:center">list[]</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[].productId</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x5546;&#x54C1;id</td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[].productName</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x5546;&#x54C1;&#x540D;&#x7A31;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[].url</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x5546;&#x54C1;url</td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[].productImageUrl</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x5546;&#x54C1;&#x5716;&#x9762;url</td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[].productBrand</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x5546;&#x54C1;&#x54C1;&#x724C;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[].productPrice</td>
+<td style="text-align:center">float</td>
+<td style="text-align:left">&#x5546;&#x54C1;&#x8A02;&#x50F9;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.products[].productSalePrice</td>
+<td style="text-align:center">float</td>
+<td style="text-align:left">&#x5546;&#x54C1;&#x7279;&#x50F9;</td>
+</tr>
+<tr>
+<td style="text-align:left">result.productsTotal</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">&#x50B3;&#x5165;&#x6A19;&#x7C64;&#x7684;&#x5546;&#x54C1;&#x7E3D;&#x6578;&#xFF08;&#x7528;&#x4F86;&#x8A08;&#x7B97;&#x5206;&#x9801;&#x6578;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="response-code-details">Response code details</h2>
+<h3 id="error-code-and-error-message-of-status-code-200">Error code and error message of status code 200</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">status code</th>
+<th style="text-align:center">errcode</th>
+<th style="text-align:left">errmsg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:left">Error undefined.</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">ACK (acknowledge)</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Invalid parameters.</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">2</td>
+<td style="text-align:left">Backend error occurred.</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">The requested operation is forbidden and cannot be completed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-of-other-error-code">Response of other error code</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">status code</th>
+<th style="text-align:left">error</th>
+<th style="text-align:left">error_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">403</td>
+<td style="text-align:left">insufficient_scope</td>
+<td style="text-align:left">The request requires higher privileges than provided by the access token.</td>
+</tr>
+<tr>
+<td style="text-align:left">401</td>
+<td style="text-align:left">invalid_token</td>
+<td style="text-align:left">The access token provided is invalid.</td>
+</tr>
+<tr>
+<td style="text-align:left">401</td>
+<td style="text-align:left">malformed_token</td>
+<td style="text-align:left">Malformed token. (missing &quot;expires&quot;)</td>
+</tr>
+<tr>
+<td style="text-align:left">401</td>
+<td style="text-align:left">invalid_token</td>
+<td style="text-align:left">The access token provided has expired.</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<pre><code>{
+    &quot;error&quot;: &quot;invalid_token&quot;,
+    &quot;error_description&quot;: &quot;The access token provided is invalid&quot;
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="nununi_Content_API_v1_2.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Content API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Content API","level":"1.2.1","depth":2,"next":{"title":"Content API","level":"1.2.2","depth":2,"path":"nununi/nununi_Content_API_v1_2.md","ref":"nununi/nununi_Content_API_v1_2.md","articles":[]},"previous":{"title":"Nununi Content API","level":"1.2","depth":1,"ref":"","articles":[{"title":"Content API","level":"1.2.1","depth":2,"path":"nununi/nununi_Content_API.md","ref":"nununi/nununi_Content_API.md","articles":[]},{"title":"Content API","level":"1.2.2","depth":2,"path":"nununi/nununi_Content_API_v1_2.md","ref":"nununi/nununi_Content_API_v1_2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nununi/nununi_Content_API.md","mtime":"2019-02-14T08:55:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-06T06:29:21.421Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

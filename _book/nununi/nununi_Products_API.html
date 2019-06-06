@@ -1,0 +1,1103 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Products API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="nununi_Products_API_v2_2.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Nununi Content API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="nununi_Content_API.html">
+            
+                <a href="nununi_Content_API.html">
+            
+                    
+                    Content API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="nununi_Content_API_v1_2.html">
+            
+                <a href="nununi_Content_API_v1_2.html">
+            
+                    
+                    Content API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Nununi Products API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="nununi_Products_API.html">
+            
+                <a href="nununi_Products_API.html">
+            
+                    
+                    Products API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="nununi_Products_API_v2_2.html">
+            
+                <a href="nununi_Products_API_v2_2.html">
+            
+                    
+                    Products API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Products API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="awoo-nununi-products-api">awoo nununi Products API</h1>
+<h3 id="request-header-key-value">request header key-value</h3>
+<p>Supportive API call: <code>form-data</code>, <code>raw-JSON</code></p>
+<p>Authorization: Bearer <code>access_token</code></p>
+<p>Content-Type: application/json ( Add this field when using raw-JSON API call )</p>
+<h2 id="get-products-get">#<code>GET</code> Products: get</h2>
+<p>Retrieves a product.</p>
+<pre><code>Requires authorization
+</code></pre><h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v2.1/`nununiId`/products/`productId`" target="_blank">https://api.awoo.org/nununi/v2.1/`nununiId`/products/`productId`</a></p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Path Params</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nununiId</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td><code>required</code> nununi Service Customer ID.</td>
+</tr>
+<tr>
+<td>productId</td>
+<td>string</td>
+<td style="text-align:right">50</td>
+<td><code>required</code> Customer&#x2019;s Product ID.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-code">Example code</h3>
+<pre><code>GET https://api.awoo.org/nununi/v2.1/5556667777/products/123456789012
+Authorization: Bearer 8a41759cb5239e281952899b5eaafcf87fc1437a
+</code></pre><h3 id="response">Response</h3>
+<p>If successful, this method returns a Products resource in the response body.</p>
+<h2 id="post-products-insert">#<code>POST</code> Products: insert</h2>
+<p>Add product information, if requested products are already existing, they will be overwrite by products with new information.</p>
+<pre><code>Requires authorization
+</code></pre><h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v2.1/`nununiId`/products" target="_blank">https://api.awoo.org/nununi/v2.1/`nununiId`/products</a></p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Path Params</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nununiId</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td><code>required</code> nununi Service Customer ID.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request Body</h3>
+<p>Required Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td style="text-align:right">50</td>
+<td>Customer&#x2019;s Product ID.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td style="text-align:right">150</td>
+<td>Product page&#x2019;s title</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td style="text-align:right">5000</td>
+<td>Product page&#x2019;s description</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>string</td>
+<td style="text-align:right">70</td>
+<td>Product brand</td>
+</tr>
+<tr>
+<td>link</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>Product page&#x2019;s url</td>
+</tr>
+<tr>
+<td>imageLink</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>Product page&#x2019;s hero image, please provide image&#x2019;s url and the image</td>
+</tr>
+<tr>
+<td>price</td>
+<td>nested object</td>
+<td style="text-align:right"></td>
+<td>Price of the item.</td>
+</tr>
+<tr>
+<td>price.value</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>Price of the product, in numerical value</td>
+</tr>
+<tr>
+<td>price.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>Currency of product price. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+</tbody>
+</table>
+<p>Optional Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>availability</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product stock status. ex: in stock, out of stock<br>Acceptable values are:<br>-in stock<br>-out of stock<br>-preorder</td>
+</tr>
+<tr>
+<td>salePrice</td>
+<td>nested object</td>
+<td style="text-align:right"></td>
+<td>Advertised sale price of the item.</td>
+</tr>
+<tr>
+<td>salePrice.value</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product price after discount, in numerical value</td>
+</tr>
+<tr>
+<td>salePrice.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>currency of product price after discount. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+<tr>
+<td>salePriceEffectiveDate</td>
+<td>nested object</td>
+<td style="text-align:right"></td>
+<td>Sale price effective date of the item.</td>
+</tr>
+<tr>
+<td>salePriceEffectiveDate.startDate</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product special price effective date. Please follow <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format.</td>
+</tr>
+<tr>
+<td>salePriceEffectiveDate.endDate</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product special price end date. Please follow <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format.</td>
+</tr>
+<tr>
+<td>itemSortVolume</td>
+<td>nested object</td>
+<td style="text-align:right"></td>
+<td>item sort volume of the item.</td>
+</tr>
+<tr>
+<td>itemSortVolume.popularity</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by popularity:<br>optional, if your products(page) have popularity configuration, you can use popularity as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>itemSortVolume.favorite</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by favorite:<br>optional, if your products(page) have favorite configuration, you can use favorite as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>itemSortVolume.salesVolume</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by sales volume:<br>optional, if your products(page) have sales volume configuration, you can use sales volume as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>itemSortVolume.rating</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by rating:<br>optional, if your products(page) have rating configuration, you can use rating as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>itemSortVolume.reviewCount</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by reviews:<br>optional, if your products(page) have reviews configuration, you can use reviews as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>string</td>
+<td style="text-align:right">100</td>
+<td>Product size</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-code">Example code</h3>
+<pre><code>curl -X POST \
+  https://api.awoo.org/nununi/v2.1/5556667777/products \
+  -H &apos;authorization: Bearer 8a41759cb5239e281952899b5eaafcf87fc1437a&apos; \
+  -H &apos;cache-control: no-cache&apos; \
+  -H &apos;content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&apos; \
+  -F id=1234567890 \
+  -F &apos;title=&#x9019;&#x662F;&#x6E2C;&#x8A66;&#x5546;&#x54C1;&apos; \
+  -F &apos;description=&#x9019;&#x662F;&#x6E2C;&#x8A66;&#x5546;&#x54C1;&#x63CF;&#x8FF0;&apos; \
+  -F &apos;brand=nununi SHOP&apos; \
+  -F link=https://www.nununiSHOP.com.tw/product/info/180507856285 \
+  -F imageLink=https://images.nununiSHOP.com.tw/uploads/product_image/6626247/47307ce66d439aad593447d343d1cb20/e143f05d7c62c9952924c191dd5a99a0.jpg \
+  -F &apos;price[value]=999&apos; \
+  -F &apos;price[currency]=TWD&apos;
+</code></pre><h2 id="delete-products-delete">#<code>DELETE</code> Products: delete</h2>
+<p>Deletes a product.</p>
+<pre><code>Requires authorization
+</code></pre><h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v2.1/`nununiId`/products/`productId`" target="_blank">https://api.awoo.org/nununi/v2.1/`nununiId`/products/`productId`</a></p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Path Params</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nununiId</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td><code>required</code> nununi Service Customer ID.</td>
+</tr>
+<tr>
+<td>productId</td>
+<td>string</td>
+<td style="text-align:right">50</td>
+<td><code>required</code> Customer&#x2019;s Product ID.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-code">Example code</h3>
+<pre><code>curl -X DELETE \
+  https://api.awoo.org/nununi/v2.1/5556667777/products/1234567890 \
+  -H &apos;authorization: Bearer 8a41759cb5239e281952899b5eaafcf87fc1437a&apos; \
+  -H &apos;cache-control: no-cache&apos; \
+</code></pre><h3 id="response">Response</h3>
+<p>If successful, this method returns an empty response body.</p>
+<h2 id="post-products-custombatch">#<code>POST</code> Products: custombatch</h2>
+<p>Retrieves, inserts, and deletes multiple products in a single request.</p>
+<pre><code>Requires authorization
+Max entries per request: 100
+</code></pre><h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v2.1/products/custombatch" target="_blank">https://api.awoo.org/nununi/v2.1/products/custombatch</a></p>
+<h3 id="request-body">Request body</h3>
+<p>Required Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nununiId</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td>nununi Service Customer ID.</td>
+</tr>
+<tr>
+<td>entries[]</td>
+<td>list</td>
+<td style="text-align:right">100</td>
+<td>The result of the execution of the batch requests.</td>
+</tr>
+<tr>
+<td>entries[].batchId</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>An entry ID, unique within the batch request.</td>
+</tr>
+<tr>
+<td>entries[].method</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>Acceptable values are:<br>- GET<br>- INSERT<br>- DELETE</td>
+</tr>
+<tr>
+<td>entries[].productId</td>
+<td>string</td>
+<td style="text-align:right">50</td>
+<td>Customer product ID. Only defined if the method is GET or DELETE.</td>
+</tr>
+<tr>
+<td>entries[].product</td>
+<td>object</td>
+<td style="text-align:right"></td>
+<td>The product to insert. Only required if the method is INSERT.</td>
+</tr>
+<tr>
+<td>entries[].product.id</td>
+<td>string</td>
+<td style="text-align:right">50</td>
+<td>Customer&#x2019;s Product ID.</td>
+</tr>
+<tr>
+<td>entries[].product.title</td>
+<td>string</td>
+<td style="text-align:right">150</td>
+<td>product page&#x2019;s title</td>
+</tr>
+<tr>
+<td>entries[].product.description</td>
+<td>string</td>
+<td style="text-align:right">5000</td>
+<td>product page&#x2019;s description</td>
+</tr>
+<tr>
+<td>entries[].product.brand</td>
+<td>string</td>
+<td style="text-align:right">70</td>
+<td>product brand</td>
+</tr>
+<tr>
+<td>entries[].product.link</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product page&#x2019;s url</td>
+</tr>
+<tr>
+<td>entries[].product.imageLink</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product page&#x2019;s hero image, please provide image&#x2019;s url.<br>image requirement:<br>1. uncompressed<br>2. 1:1 aspect ratios(square)</td>
+</tr>
+<tr>
+<td>entries[].product.price.value</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>price of the product, in numerical value</td>
+</tr>
+<tr>
+<td>entries[].product.price.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>currency of product price. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+</tbody>
+</table>
+<p>Optional Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>entries[].product.availability</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product stock status. ex: in stock, out of stock Acceptable values are:<br>- in stock<br>- out of stock<br>- preorder</td>
+</tr>
+<tr>
+<td>entries[].product.salePrice.value</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product price after discount, in numerical value</td>
+</tr>
+<tr>
+<td>entries[].product.salePrice.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>currency of product price after discount. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+<tr>
+<td>entries[].product.salePriceEffectiveDate.startDate</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product special price effective date. Please follow <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format.</td>
+</tr>
+<tr>
+<td>entries[].product.salePriceEffectiveDate.endDate</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product special price end date. Please follow <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> format.</td>
+</tr>
+<tr>
+<td>entries[].product.itemSortVolume</td>
+<td>nested object</td>
+<td style="text-align:right"></td>
+<td>item sort volume of the item.</td>
+</tr>
+<tr>
+<td>entries[].product.itemSortVolume.popularity</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by popularity:</td>
+</tr>
+<tr>
+<td>optional, if your products(page) have popularity configuration, you can use popularity as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>entries[].product.itemSortVolume.favorite</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by favorite:<br>optional, if your products(page) have favorite configuration, you can use favorite as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>entries[].product.itemSortVolume.salesVolume</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by sales volume:<br>optional, if your products(page) have sales volume configuration, you can use sales volume as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>entries[].product.itemSortVolume.rating</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product sorting order by rating:<br>optional, if your products(page) have rating configuration, you can use rating as a sorting method on nununi page.</td>
+</tr>
+<tr>
+<td>entries[].product.size</td>
+<td>string</td>
+<td style="text-align:right">100</td>
+<td>Product size</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-code-php">Example code (PHP)</h3>
+<pre><code>function custombatchExample() {
+    $nununiId = &quot;&lt;YOUR_NUNUNI_ID&gt;&quot;;
+    $nununiToken = &quot;&lt;YOUR_NUNUNI_TOKEN&gt;&quot;;
+    $nununiApiUrl = &quot;https://api.awoo.org/nununi/v2.1/products/custombatch&quot;;
+
+    $data = [
+        &quot;nununiId&quot; =&gt; $nununiId,
+        &quot;entries[0][batchId]&quot; =&gt; &quot;batch1&quot;,
+        &quot;entries[0][method]&quot; =&gt; &quot;GET&quot;,
+        &quot;entries[0][productId]&quot; =&gt; &quot;&lt;YOUR_PRODUCT_ID&gt;&quot;,
+        &quot;entries[1][batchId]&quot; =&gt; &quot;batch2&quot;,
+        &quot;entries[1][method]&quot; =&gt; &quot;GET&quot;,
+        &quot;entries[1][productId]&quot; =&gt; &quot;&lt;YOUR_PRODUCT_ID&gt;&quot;,
+    ];
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $nununiApiUrl);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [ &quot;Authorization: Bearer {$nununiToken}&quot; ]);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    $responseBody = curl_exec($ch);
+    curl_close($ch);
+
+    $response = json_decode($responseBody, true);
+}
+</code></pre><h3 id="response">Response</h3>
+<p>If successful, this method returns an entries object in the response body. using batchId to mapping entry.</p>
+<h2 id="get-products-list">#<code>GET</code> Products: list</h2>
+<p>Lists the products</p>
+<pre><code>Requires authorization
+</code></pre><h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v2.1/`nununiId`/products" target="_blank">https://api.awoo.org/nununi/v2.1/`nununiId`/products</a></p>
+<h3 id="parameters">Parameters</h3>
+<p>Path parameters</p>
+<table>
+<thead>
+<tr>
+<th>Path Params</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nununiId</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td><code>required</code> nununi Service Customer ID.</td>
+</tr>
+</tbody>
+</table>
+<p>Query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Path Params</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageToken</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td>The token returned by the previous request.</td>
+</tr>
+<tr>
+<td>maxResults</td>
+<td>unsigned integer</td>
+<td style="text-align:right">50</td>
+<td>The maximum number of products to return in the response, used for paging.<br>Max number of maxResults: 500</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-code">Example code</h3>
+<pre><code>GET https://api.awoo.org/nununi/v2.1/5556667777/products?maxResults=10&amp;pageToken=51
+Authorization: Bearer 8a41759cb5239e281952899b5eaafcf87fc1437a
+</code></pre><h3 id="response">Response</h3>
+<p>If successful, this method returns a response body.</p>
+<h2 id="post-inventory-set">#<code>POST</code> Inventory: set</h2>
+<p>Update the price or/and salePrice of a product.</p>
+<h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v2.1/`nununiId`/inventory/products/`productId`" target="_blank">https://api.awoo.org/nununi/v2.1/`nununiId`/inventory/products/`productId`</a></p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Path Params</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nununiId</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td><code>required</code> nununi Service Customer ID.</td>
+</tr>
+<tr>
+<td>productId</td>
+<td>string</td>
+<td style="text-align:right">50</td>
+<td><code>required</code> Customer&#x2019;s Product ID.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request Body</h3>
+<p>Optional Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>price</td>
+<td>object</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td>price.value</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>price of the product, in numerical value</td>
+</tr>
+<tr>
+<td>price.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>currency of product price. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+<tr>
+<td>salePrice</td>
+<td>object</td>
+<td style="text-align:right"></td>
+<td></td>
+</tr>
+<tr>
+<td>salePrice.value</td>
+<td>object</td>
+<td style="text-align:right"></td>
+<td>Advertised sale price of the item.</td>
+</tr>
+<tr>
+<td>salePrice.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>currency of product price. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns the updated product data.</p>
+<h2 id="post-inventory-custombatch">#<code>POST</code> Inventory: custombatch</h2>
+<p>Update multiple products in a single request.</p>
+<pre><code>Requires authorization
+Max entries per request: 100
+</code></pre><h3 id="definition">Definition</h3>
+<p><a href="https://api.awoo.org/nununi/v2.1/inventory/custombatch" target="_blank">https://api.awoo.org/nununi/v2.1/inventory/custombatch</a></p>
+<h3 id="request-body">Request Body</h3>
+<p>Required Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nununiId</td>
+<td>string</td>
+<td style="text-align:right">10</td>
+<td>nununi Service Customer ID.</td>
+</tr>
+<tr>
+<td>entries[]</td>
+<td>list</td>
+<td style="text-align:right">100</td>
+<td>The result of the execution of the batch requests.</td>
+</tr>
+<tr>
+<td>entries[].batchId</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>An entry ID, unique within the batch request.</td>
+</tr>
+<tr>
+<td>entries[].product</td>
+<td>object</td>
+<td style="text-align:right"></td>
+<td>Inside product object, at least one of &#x201C;price&#x201D; or &#x201C;salePrice&#x201D; is required. When updating &#x201C;price&#x201D; or/and &#x201C;salePrice&#x201D;, both of &#x201C;value&#x201D; and &#x201C;currency&#x201D; must be provided.</td>
+</tr>
+<tr>
+<td>entries[].product.id</td>
+<td>string</td>
+<td style="text-align:right">50</td>
+<td>Customer product ID.</td>
+</tr>
+</tbody>
+</table>
+<p>Optional Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property name</th>
+<th>Value</th>
+<th style="text-align:right">Length</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>entries[].product.price.value</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>price of the product, in numerical value</td>
+</tr>
+<tr>
+<td>entries[].product.price.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>currency of product price. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+<tr>
+<td>entries[].product.salePrice.value</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>product price after discount, in numerical value</td>
+</tr>
+<tr>
+<td>entries[].product.salePrice.currency</td>
+<td>string</td>
+<td style="text-align:right"></td>
+<td>currency of product price. Please follow <a href="https://en.wikipedia.org/wiki/ISO_4217" target="_blank">ISO 4217</a> currency code format. ex: TWD, JPY and USD.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns an entries object in the response body. using batchId to mapping entry.</p>
+<h2 id="response-codes">#Response Codes</h2>
+<h3 id="200-errcode">200 errcode</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">code</th>
+<th style="text-align:center">errcode</th>
+<th style="text-align:left">errmsg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:left">Error undefined.</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">0</td>
+<td style="text-align:left">ACK (acknowledge)</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">1</td>
+<td style="text-align:left">Invalid parameters.</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">2</td>
+<td style="text-align:left">Backend error occurred.</td>
+</tr>
+<tr>
+<td style="text-align:left">200</td>
+<td style="text-align:center">3</td>
+<td style="text-align:left">The requested operation is forbidden and cannot be completed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http-error-code">http error code</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">status</th>
+<th style="text-align:left">Error</th>
+<th style="text-align:left">Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">403</td>
+<td style="text-align:left">insufficient_scope</td>
+<td style="text-align:left">The request requires higher privileges than provided by the access token.</td>
+</tr>
+<tr>
+<td style="text-align:left">401</td>
+<td style="text-align:left">invalid_token</td>
+<td style="text-align:left">The access token provided is invalid.</td>
+</tr>
+<tr>
+<td style="text-align:left">401</td>
+<td style="text-align:left">malformed_token</td>
+<td style="text-align:left">Malformed token. (missing &quot;expires&quot;)</td>
+</tr>
+<tr>
+<td style="text-align:left">401</td>
+<td style="text-align:left">invalid_token</td>
+<td style="text-align:left">The access token provided has expired.</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="nununi_Products_API_v2_2.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Products API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Products API","level":"1.3.1","depth":2,"next":{"title":"Products API","level":"1.3.2","depth":2,"path":"nununi/nununi_Products_API_v2_2.md","ref":"nununi/nununi_Products_API_v2_2.md","articles":[]},"previous":{"title":"Nununi Products API","level":"1.3","depth":1,"ref":"","articles":[{"title":"Products API","level":"1.3.1","depth":2,"path":"nununi/nununi_Products_API.md","ref":"nununi/nununi_Products_API.md","articles":[]},{"title":"Products API","level":"1.3.2","depth":2,"path":"nununi/nununi_Products_API_v2_2.md","ref":"nununi/nununi_Products_API_v2_2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nununi/nununi_Products_API.md","mtime":"2019-05-16T11:52:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-06T06:29:21.421Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
