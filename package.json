@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gitbook serve",
+    "start": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
     "build": "./deploy.sh"
   },
   "repository": {
@@ -20,6 +21,11 @@
   },
   "homepage": "https://github.com/awootaiwan/awoo_wiki#readme",
   "dependencies": {
-    "gitbook-cli": "^2.3.2"
+    "minimatch": "^3.0.4",
+    "pseudomap": "^1.0.2",
+    "vuepress": "^1.0.0-rc.1"
+  },
+  "devDependencies": {
+    "vuepress-plugin-autonav": "^0.1.2"
   }
 }

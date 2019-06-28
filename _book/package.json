@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/awootaiwan/awoo_wiki#readme",
   "dependencies": {
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-anchor-nav-x": "^1.0.2",
+    "gitbook-plugin-anchor-navigation": "0.0.1"
   }
 }
